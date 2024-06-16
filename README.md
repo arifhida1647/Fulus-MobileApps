@@ -70,11 +70,3 @@ For any inquiries or support regarding the FULUS eWallet application, please con
 Feel free to customize this README to fit your specific project details and preferences.
 </div>
 ```
-
-In this version:
-- I've added headings to structure the sections clearly.
-- Used bold formatting for key information.
-- Added code blocks with syntax highlighting for better readability.
-- Included a shaded box at the end to encourage customization and personalization.
-
-Feel free to adjust the colors and formatting further to match your project's style or branding!
