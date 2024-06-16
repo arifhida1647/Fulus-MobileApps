@@ -64,7 +64,6 @@ To run the FULUS eWallet application, follow these steps:
 ### Support
 For any inquiries or support regarding the FULUS eWallet application, please contact [arifhida1647@gmail.com].
 
----
 
 <div style="background-color:#f0f8ff; padding: 10px;">
 Feel free to customize this README to fit your specific project details and preferences.
