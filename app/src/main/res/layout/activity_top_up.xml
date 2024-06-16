@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Judul Halaman -->
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/topupTittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top Up"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="1dp"
+            android:textColor="#2F1155"
+            android:textStyle="bold"
+            android:fontFamily="@font/rubik" />
+
+        <!-- Input Amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_background"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:clipToPadding="false">
+
+            <EditText
+                android:id="@+id/topup_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter amount"
+                android:inputType="numberDecimal"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/rubik" />
+        </LinearLayout>
+
+        <!-- Jarak tambahan -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Metode Pembayaran -->
+        <TextView
+            android:id="@+id/payment_method_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            android:textSize="18sp"
+            android:layout_marginLeft="18dp"
+            android:textColor="#2F1155"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/rubik" />
+
+        <RadioGroup
+            android:id="@+id/payment_methods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_background"
+            android:elevation="4dp"
+            android:padding="16dp"
+            android:layout_margin="16dp"
+            android:clipToPadding="false">
+
+            <RadioButton
+                android:id="@+id/payment_method1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:drawableLeft="@drawable/ic_bank1"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/rubik"
+                android:tag="Visa" />
+
+            <!-- Payment Method 2 -->
+            <RadioButton
+                android:id="@+id/payment_method2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:drawableLeft="@drawable/ic_bank2"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/rubik"
+                android:tag="Mastercard" />
+
+            <!-- Payment Method 3 -->
+            <RadioButton
+                android:id="@+id/payment_method3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:drawableLeft="@drawable/ic_bank3"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/rubik"
+                android:tag="Paypal" />
+        </RadioGroup>
+
+        <!-- Tombol Top Up -->
+        <Button
+            android:id="@+id/btn_topup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top Up"
+            android:backgroundTint="#2F1155"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/rubik"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+
+    <!-- Blur effect -->
+    <View
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Loading animation -->
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleLarge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

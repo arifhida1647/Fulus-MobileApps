@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Wave Gradient -->
+    <ImageView
+        android:id="@+id/wave_background"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/wave_gradient"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Logo Checkmark -->
+    <ImageView
+        android:id="@+id/checkmark_image"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:src="@drawable/checkmark"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="130dp"
+        android:layout_marginTop="50dp"/>
+
+    <!-- CardView untuk keterangan transaksi -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:layout_marginTop="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Logo Aplikasi -->
+            <ImageView
+                android:id="@+id/app_logo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/fulus_final"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Payment Success text -->
+            <TextView
+                android:id="@+id/payment_success_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top-up Success"
+                android:textSize="24sp"
+                android:textColor="#4CAF50"
+                android:fontFamily="@font/rubik"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Tanggal dan Waktu -->
+            <TextView
+                android:id="@+id/payment_date_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date and Time"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/rubik"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Jumlah Nominal Uang -->
+            <TextView
+                android:id="@+id/payment_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/rubik"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Nama Pengguna -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/rubik"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Keterangan Detail -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/rubik" />
+
+                    <TextView
+                        android:id="@+id/payment_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Method"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/rubik" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tombol Kembali ke Halaman Utama -->
+    <Button
+        android:id="@+id/btn_back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Home"
+        android:backgroundTint="#2F1155"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:layout_below="@id/card_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rubik"/>
+
+</RelativeLayout>
